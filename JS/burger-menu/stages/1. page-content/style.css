@@ -1,0 +1,42 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+body, html, header {
+  height: 100vh;
+}
+
+body {
+  font-family: "montserrat", roboto;
+  margin: 0;
+}
+
+header {
+  background: #e74c3c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content {
+  text-align: center;
+}
+
+/* по желанию добавляем анимацию */
+@keyframes shotup {
+  0% {
+    transform: translateY(300%);
+    opacity: 0;
+  }
+  90% {
+    transform: translateY(-50px);
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+.content h1 {
+  font-size: 70px;
+  animation: shotup 600ms ease-in-out;
+  animation-delay: 300ms;
+}

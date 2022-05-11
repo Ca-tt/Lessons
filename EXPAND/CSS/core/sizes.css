@@ -1,0 +1,15 @@
+.full-width,
+.w-100 {
+  width: 100%;
+}
+
+.half-width,
+.width-50 {
+  width: 50%;
+}
+
+.no-width,
+.zero-width,
+.width-0 {
+  width: 0;
+}

@@ -1,0 +1,10 @@
+.dropdown-menu {
+	z-index: -1;
+	visibility: hidden;;
+	transform: translateY(200px);
+}
+
+.stay-visible {
+	transform: translateY(0);
+	visibility: visible;
+}

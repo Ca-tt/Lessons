@@ -1,0 +1,38 @@
+@import './gradients.css';
+
+:root {
+	--card-bg: #1F1B42;
+	--body-bg: rgba(0, 0, 89, 1);
+}
+
+body {
+	color: white;
+	background-color: var(--body-bg);
+}
+
+.bg-main {
+  background-color: rgba(0, 0, 89, 1);
+}
+
+.card,
+.card-img,
+.card-img img {
+	background-color: var(--card-bg);
+	border-radius: .5rem;
+}
+
+.card {
+	padding: 1rem;
+}
+
+.card-img {
+	max-width: 50px;
+}
+
+@media screen and (max-width: 768px) {
+	body {
+		background-color: rgba(0, 0, 89, 1);
+	}
+}
+
+

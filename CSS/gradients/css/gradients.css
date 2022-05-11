@@ -1,0 +1,79 @@
+:root {
+	--bg-gradient: linear-gradient(
+		90deg,
+		rgba(0, 240, 255, 1) 0%,
+		rgba(87, 115, 255, 1) 50%,
+		rgba(255, 0, 122, 1) 100%
+	);
+	/* его нужно сделать поярче. Это по твоей части =) */
+	--text-gradient: linear-gradient(
+		90deg,
+		rgba(0, 255, 221) 0%,
+		rgba(87, 115, 255, 1) 50%,
+		rgba(255, 0, 122, 1) 100%
+	);
+	--bg-left-gradient: linear-gradient(
+		310deg,
+		rgba(0, 0, 89, 1) 60%,
+		rgba(48, 148, 154, 1) 100%
+	);
+	--bg-right-gradient: linear-gradient(
+		50deg,
+		rgba(0, 0, 89, 1) 60%,
+		rgba(133, 47, 88, 1) 100%
+	);
+	--header-button-gradient: linear-gradient(90deg, #521d58 0%, #672458 100%);
+}
+
+/* button gradients */
+
+.gradient-wrapper,
+.button-gradient-wrapper {
+	background: var(--bg-gradient);
+	display: inline-block;
+	border-radius: 0.5em;
+	padding: 2px;
+}
+
+.round-btn {
+	background: var(--header-button-gradient);
+}
+
+/* gradient font */
+.gradient-text {
+	background: var(--text-gradient);
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+	-webkit-background-clip: text;
+	padding: 5px 0;
+	color: #fff;
+}
+
+/* gradients */
+.background-gradient {
+	display: none;
+}
+
+/* Responsive gradients */
+@media screen and (min-width: 768px) {
+	.background-gradient {
+		display: block;
+		position: absolute;
+		top: 0;
+		z-index: -1;
+		height: 500px;
+	}
+
+	.gradient-left {
+		background: var(--bg-left-gradient);
+		left: 0;
+		right: 50%;
+		top: 0;
+	}
+
+	.gradient-right {
+		background: var(--bg-right-gradient);
+		right: 0;
+		left: 50%;
+	}
+}

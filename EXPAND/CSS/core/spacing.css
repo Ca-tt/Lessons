@@ -1,0 +1,24 @@
+.paddings-x,
+.p-x {
+  padding: 0 1rem;
+}
+
+.m-x {
+  margin: 0 1rem;
+}
+
+.m-x-small {
+  margin: 0 0.25rem;
+}
+
+.separated-vertically {
+  margin: var(--l-gap) 0;
+}
+
+.items-separated-horizontally > * {
+  margin: 0 var(--l-gap);
+}
+
+.items-separated-vertically > * {
+  margin: var(--default-gap) 0;
+}

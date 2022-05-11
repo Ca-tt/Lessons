@@ -1,0 +1,10 @@
+:root {
+  --transition-xs: 0.3s;
+  --transition-s: 0.5s;
+  --transition-m: 0.8s;
+  --transition-l: 1s;
+}
+
+.transition-s {
+  transition: all var(--transition-s);
+}

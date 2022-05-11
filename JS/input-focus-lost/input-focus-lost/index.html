@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<style>
+  .hidden {
+  opacity: 0;
+}
+
+#input {
+  transition: all 0.3s ease-in-out;
+}
+
+:focus {
+	outline: none;
+}
+
+.col-3 {
+	float: left;
+	width: 27.33%;
+	margin: 40px 3%;
+	position: relative;
+} /* necessary to give position: relative to parent. */
+input[type="text"] {
+	font: 15px/24px "Lato", Arial, sans-serif;
+	color: #333;
+	width: 100%;
+	box-sizing: border-box;
+	letter-spacing: 1px;
+}
+
+.effect-1,
+.effect-2,
+.effect-3 {
+	border: 0;
+	padding: 7px 0;
+	border-bottom: 1px solid #ccc;
+}
+
+.effect-1 ~ .focus-border {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 0;
+	height: 2px;
+	background-color: #3399ff;
+	transition: 0.4s;
+}
+.effect-1:focus ~ .focus-border {
+	width: 100%;
+	transition: 0.4s;
+}
+
+.effect-2 ~ .focus-border {
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	width: 0;
+	height: 2px;
+	background-color: #3399ff;
+	transition: 0.4s;
+}
+.effect-2:focus ~ .focus-border {
+	width: 100%;
+	transition: 0.4s;
+	left: 0;
+}
+</style>
+
+<body>
+
+  <!-- my input -->
+  <div class="col-3">
+    <label for="input">
+      <i class="fas fa-search"></i>
+    </label>
+    <input id="input" name="input" class="effect-2" type="text" placeholder="Placeholder Text">
+    <span class="focus-border"></span>
+  </div>
+
+  <script defer>
+    const input = document.getElementById('input');
+    const icon = document.querySelector('.fa-search');
+    input.onblur = function () {
+      console.log('blur');
+      this.classList.add('hidden');
+      icon.classList.remove('hidden');
+    }
+    input.onfocus = function () {
+      console.log('focus');
+      this.classList.remove('hidden');
+      icon.classList.add('hidden');
+    }
+
+    icon.onclick = function () {
+      if (input.classList.contains('hidden')) {
+        input.classList.remove('hidden');
+        input.focus();
+      } else {
+        input.classList.add('hidden');
+        input.blur();
+      }
+    }
+  </script>
+</body>
+
+</html>

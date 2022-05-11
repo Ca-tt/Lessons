@@ -1,0 +1,17 @@
+:root {
+  /* SPACE SIZES */
+  --xs-gap: 0.25rem;
+  --sm-gap: 0.5rem;
+  --default-gap: 1rem;
+  --m-gap: 1.5rem;
+  --l-gap: 2rem;
+  --xl-gap: 3rem;
+
+  /* FONT SIZES */
+  --xs-fz: 0.8rem;
+  --sm-fz: 1rem;
+  --default-fz: 1.5rem;
+  --m-fz: 2rem;
+  --l-fz: 3rem;
+  --xl-fz: 4.5rem;
+}

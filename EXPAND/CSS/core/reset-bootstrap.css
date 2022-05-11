@@ -1,0 +1,12 @@
+/* reset bootstrap */
+.card {
+  position: static;
+  display: block;
+  background-color: transparent;
+  border: 0;
+  border-radius: 0;
+}
+
+.card-title {
+  margin: 0;  
+}

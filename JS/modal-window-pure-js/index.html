@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+  <button id="button-modal">Open modal</button>
+
+
+  <div id="modal" className="modal">Test modal</div>
+
+  <script>
+
+    let modal = document.getElementById('modal');
+    let button = document.getElementById('button-modal');
+    modal.style.display = "none";
+
+    button.addEventListener('click', function () {
+
+      if (modal.style.display == 'none') {
+        openModal();
+      } else {
+        closeModal();
+      }
+    });
+
+    function openModal() {
+      modal.style.display = "block";
+    }
+
+    function closeModal() {
+      modal.style.display = "none";
+    }
+
+  </script>
+
+</body>
+</html>

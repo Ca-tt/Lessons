@@ -1,0 +1,100 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+body, html, header {
+  height: 100vh;
+}
+
+body {
+  font-family: "montserrat", roboto;
+  margin: 0;
+}
+
+header {
+  background: #e74c3c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content {
+  text-align: center;
+}
+
+@keyframes shotup {
+  0% {
+    transform: translateY(300%);
+    opacity: 0;
+  }
+  90% {
+    transform: translateY(-50px);
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+.content h1 {
+  font-size: 70px;
+  animation: shotup 600ms ease-in-out;
+  animation-delay: 300ms;
+}
+
+
+.hamburger-icon {
+  position: absolute;
+  height: 60px;
+  width: 60px;
+  top: 10%;
+  left: 3%;
+  z-index: 3;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: all 0.2s ease-in-out;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.hamburger-icon:hover {
+  transform: scale(1.2);
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* can be replaced with "linear" or "ease-in-out" */
+.hamburger-icon {
+  --animation: cubic-bezier(0.84, 0.06, 0.52, 1.8);
+}
+
+.icon-1, .icon-2, .icon-3 {
+  position: absolute;
+  left: 25%;
+  top: 50%;
+  width: 32px;
+  height: 3px;
+  background-color: black;
+  transition: all 400ms var(--animation);
+} 
+
+.icon-1 {
+  transform: translateY(-8px);
+  animation-delay: 100ms;
+}
+
+.icon-3 {
+  transform: translateY(8px);
+  animation-delay: 250ms;
+}
+
+/* новое */
+
+.icon-1.active {
+  transform: rotate(40deg);
+}
+
+.icon-3.active {
+  transform: rotate(-40deg);
+}
+
+.icon-2.active {
+  opacity: 0;
+}
+/* закончили */

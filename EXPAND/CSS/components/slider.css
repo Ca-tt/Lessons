@@ -1,0 +1,28 @@
+:root {
+  --dot-size: 20px;
+}
+
+/* SLIDES */
+.slide {
+  display: inline-block;  
+}
+
+.inactive {
+  display: none;
+}
+/* SLIDES END */
+
+
+/* DOTS */
+.dot {
+  width: var(--dot-size);
+  height: var(--dot-size);
+  background-color: gray;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: aqua;
+}
+/* DOTS END*/

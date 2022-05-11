@@ -1,0 +1,14 @@
+/* DEFAULT FONT SIZE */
+.fz-as-mobile {
+  font-size: 1.5rem;
+}
+
+/* SIZES */
+.fz-big, 
+.big-font {
+  font-size: 3rem;
+}
+
+.fz-small {
+  font-size: 0.8rem;
+}

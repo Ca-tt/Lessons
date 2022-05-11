@@ -1,0 +1,25 @@
+/* DEFAULT */
+.container,
+.container-80,
+.container-70,
+.container-60 {
+  max-width: 80%;
+  margin: var(--l-gap) auto;
+}
+
+
+/* SIZES */
+.container-80 {
+  max-width: 80%;
+}
+
+.container-70 {
+  max-width: 70%;
+}
+
+.container-60 {
+  max-width: 60%;
+}
+
+
+/* RESPONSIVE */

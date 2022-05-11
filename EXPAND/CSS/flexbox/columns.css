@@ -1,0 +1,11 @@
+.col,
+.col-column,
+.col-items-between {
+  display: flex;
+  flex-direction: column;
+	flex-grow: 1;
+}
+
+.col-items-between {
+  justify-content: space-between;
+}

@@ -1,0 +1,85 @@
+body {
+	--gradient: linear-gradient(
+		90deg,
+		rgba(0, 240, 255, 1) 0%,
+		rgba(87, 115, 255, 1) 50%,
+		rgba(255, 0, 122, 1) 100%
+	);
+}
+
+.background-gradient {
+	display: inline-block;
+	padding: 2px;
+	background: var(--gradient);
+}
+
+.background-gradient.round,
+.background-gradient.round .gradient-element {
+	border-radius: 20px;
+}
+
+.btn {
+	border: 1px solid transparent;
+}
+
+/*
+	how it works
+	- webkit-text-fill color fills text
+	- linear gradient works only at certain -- major angles
+	- background-clip points the area where gradient is applied
+	- paddings are needed for preventing text clipping from the bottom
+	- color is a fallback for browsers that don't support text-fill
+	- background -webkit is a optional solution
+	- that's it!
+*/
+
+.gradient-text {
+	font-size: 5rem;
+	background: linear-gradient(
+		245deg,
+		rgba(0, 240, 255, 1) 0%,
+		rgba(87, 115, 255, 1) 50%,
+		rgba(255, 0, 122, 1) 100%
+	);
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+	-webkit-background-clip: text;
+	padding: 5px 0;
+	color: #fff;
+}
+
+.gradient-backgrounds,
+.gradient-bg {
+	height: 100vh;
+}
+
+.gradient1 {
+	background: rgb(48, 148, 154);
+	background: linear-gradient(
+		310deg,
+		rgba(0, 0, 89, 1) 60%,
+		rgba(48, 148, 154, 1)
+	) 100%;
+	left: 0;
+	bottom: 0;
+	right: 50%;
+	top: 0;
+}
+
+.gradient2 {
+	background: rgb(48, 148, 154);
+	background: linear-gradient(
+		50deg,
+		rgba(0, 0, 89, 1) 60%,
+		rgba(133, 47, 88, 1)
+	) 100%;
+	right: 0;
+	bottom: 0;
+	left: 50%;
+	top: 0;
+}
+.rgb {
+	position: absolute;
+	z-index: -1;
+	height: 500px;
+}

@@ -1,0 +1,45 @@
+@keyframes slide-up {
+	0% {
+		transform: translateY(200px);
+		visibility: hidden;
+		z-index: -1;
+	}
+
+	100% {
+		transform: translateY(0);
+		visibility: visible;
+		z-index: 0;
+	}
+}
+
+@keyframes slide-down {
+	0% {
+		transform: translateY(0);
+		visibility: visible;
+		z-index: 0;
+	}
+
+	100% {
+		transform: translateY(200px);
+		visibility: hidden;
+		z-index: -1;
+	}
+}
+
+.slide-up,
+.slide-down {
+	transition: all 0.3s;
+	animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+	animation-delay: 0.3s;
+	animation-duration: 0.8s;
+	animation-fill-mode: forwards;
+}
+
+.slide-up {
+	animation-name: slide-up;
+}
+
+.slide-down {
+	animation-name: slide-down;
+	animation-delay: 1s;
+}

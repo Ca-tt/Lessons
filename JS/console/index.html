@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <div class="table"></div>
+
+  <div></div>
+
+  <script>
+    console.time('loop');
+    const person = {
+      name: "Damir",
+      age: 19,
+      gender: "male",
+      cardBalance: "99999",
+      degree: "Bachelor",
+      isACoolGuy: true,
+    };
+    const numbers = [1, 2, 3];
+    
+    console.table(numbers);
+    console.table(person);
+    console.timeEnd('loop');
+
+    const table = document.querySelector('.table');
+    console.dir(table);
+  </script>
+</body>
+
+</html>

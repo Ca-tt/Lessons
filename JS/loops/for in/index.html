@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<div>hey</div>
+		<div></div>
+		<div></div>
+
+		<script defer>
+			const person = {
+				name: "Damir",
+				age: 19,
+				gender: "male",
+			};
+
+			for (const i in person) {
+				console.log(`${i}: ${person[i]}`);
+			}
+
+			let countries = [
+				{
+					name: "China",
+					population: "1,439,323,776",
+				},
+				{
+					name: "India",
+					population: "1,380,004,385",
+				},
+				{
+					name: "United States",
+					population: "331,002,651",
+				},
+			];
+
+			// for (const prop in countries) {
+			// 	console.log(`${prop}: ${countries[prop]}`);
+			// }
+
+			const fridge = {
+				food: {
+					sausage: "Колбаса 0.5кг натуральная сырокопчёная",
+					bread: "Прибалтийский чёрный",
+					butter: true,
+					water: "Кока-кола",
+					beer: false,
+					pureWaterBottles: 23,
+				},
+				freezer: {
+					cutlets: 28,
+					iceCream: "Белая Бярёза",
+					meat: "Свинная подчерёвина, 3кг",
+				},
+			};
+
+			for (const sections in fridge) {
+				for (const foodItem in fridge[sections]) {
+					console.log(`${foodItem}: ${fridge[sections][foodItem]}`);
+				}
+			}
+		</script>
+	</body>
+</html>
