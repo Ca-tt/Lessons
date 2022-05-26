@@ -35,6 +35,19 @@
 	animation-fill-mode: forwards;
 }
 
+.reverse-animation {
+	animation-direction: reverse;
+}
+
+.animation-paused {
+	animation-play-state: paused;
+}
+
+.animation-running {
+	animation-play-state: running;
+}
+
+
 .slide-up {
 	animation-name: slide-up;
 }

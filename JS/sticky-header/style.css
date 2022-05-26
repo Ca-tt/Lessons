@@ -1,0 +1,28 @@
+body {
+  font-size: 20px;
+}
+
+/* 
+  ставить блок по центру
+  используя margin auto и max-width 
+*/
+.blocks-center {
+  margin: 0 auto;
+  max-width: 60%;
+  text-align: center;
+}
+
+.title {
+  color: rgb(35, 35, 35);
+}
+
+.titles .title {
+  font-size: 55px;
+}
+
+/* 
+  делаем шрифт тонким 
+*/
+.titles .subtitle {
+  font-weight: 200;
+}

@@ -3,8 +3,6 @@ let animationUp = "slide-up";
 let animationDown = "slide-down";
 let stayVisible = "stay-visible";
 
-// add animation-direction
-
 document.querySelectorAll(".site-nav-link").forEach((link) => {
 	link.onmouseenter = () => {
 		dropdownMenu.classList.remove(stayVisible);

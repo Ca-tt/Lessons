@@ -1,0 +1,112 @@
+body {
+    font-size: 20px;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    height: 200vh;
+    margin: 0;
+}
+
+.container {
+	max-width: 80%;
+	margin: 0 auto;
+}
+
+.row {
+	display: flex;
+}
+
+.v-center {
+	align-items: center;
+}
+
+.left-right {
+	justify-content: space-between;
+}
+
+header {
+    transition: .5s;
+}
+
+.fixed {
+	position: fixed;
+	box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+	width: 100%;
+	top: 0;
+	left: 0;
+    background-color: white;
+}
+
+.sitename {
+	font-size: 30px;
+}
+
+nav a {
+    color: black;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.grey-color {
+    color: #232323;
+}
+
+.container-narrow {
+    max-width: 50%;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 60px;
+    margin: 80px 0 50px 0;
+}
+
+.row-wrap {
+    flex-wrap: wrap;
+}
+
+.card {
+    max-width: 45%;
+}
+
+img {
+    max-width: 100%;
+}
+
+.big-paddings {
+    padding: 50px 0 80px 0;
+}
+
+.button {
+    background-color: #3A2D2C;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: .5s;
+    text-decoration: none;
+}
+
+.button:hover {
+    background-color: #523c3a;
+}
+
+body {
+    margin: 0;
+}
+
+section {
+    padding: 20px 0;
+}
+
+.pink-background {
+    background-color: #ffe4e1;
+}
+.left {
+    max-width: 45%;
+}

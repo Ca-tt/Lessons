@@ -1,6 +1,11 @@
 img {
   max-width: 100%;
 }
+
+.btn {
+  padding: 0.4rem !important;
+}
+
 .modal {
   display: block !important;
   position: static;

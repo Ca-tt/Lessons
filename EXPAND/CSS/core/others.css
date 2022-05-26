@@ -1,3 +1,11 @@
 .pointer {
   cursor: pointer;
 }
+
+.pointer-events-auto {
+  pointer-events: auto;
+}
+
+.pointer-events-auto-i {
+  pointer-events: auto !important;
+}

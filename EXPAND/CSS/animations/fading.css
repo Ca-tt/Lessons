@@ -1,3 +1,24 @@
-.fade-out {
-  animation-name: fade-out;
+@keyframes background-fade {
+	0% {
+		opacity: 0;
+	}
+
+	25% {
+		opacity: 0.5;
+	}
+
+	50% {
+		opacity: 1;
+	}
+
+	75% {
+		opacity: 0.5;
+	}
+
+	100% {
+		opacity: 0;
+	}
+}
+.background-fade {
+	animation: background-fade 2s infinite linear;
 }

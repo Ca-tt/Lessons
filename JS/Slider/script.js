@@ -11,6 +11,9 @@ window.onload = function () {
 		},
 	};
 
+
+
+
 	let dots = {
 		section: document.querySelector(".dots"),
 		first: document.querySelector(".dot"),
@@ -39,6 +42,7 @@ window.onload = function () {
 			dots.duplicates = fromDot.cloneNode();
 			dots.section.append(dots.duplicates);
 		}
+		// save dots and count after generation 
 		dots.count = document.querySelectorAll(".dot").length;
 		dots.all = document.querySelectorAll(".dot");
 
@@ -67,6 +71,8 @@ window.onload = function () {
 		}
 	}
 
+	// disable dots and slider
+	// enable first slide and dot
 	function sliderReset() {
 		disableSlides();
 		disableDots();
@@ -76,6 +82,7 @@ window.onload = function () {
 	}
 	sliderReset();
 
+	// set number to current index + 1
 	function setNumbers(currentSlideIndex) {
 		slideNumbers.current.innerHTML = currentSlideIndex + 1;
 		slideNumbers.count.innerHTML = slides.count;
@@ -123,7 +130,12 @@ window.onload = function () {
 		return nextSlide;
 	}
 
-	// change slides depending on next index
+	/*** 
+		1) Set current slide to next slide,
+		2) Update nextSlide index,
+		3) Check if next slide is not out of slide range
+		4) Update dots and numbers
+	***/
 	function changeSlide(nextSlide) {
 		slides.index.current = slides.index.next;
 		slides.index.next += nextSlide;
@@ -140,13 +152,18 @@ window.onload = function () {
 		disableDots();
 		disableSlides();
 		
+		// на какой кружок нажали, тот и становится активным
 		dots.all[slideNumber].classList = "dot active m-x-small";
 
 		swapSlides(slides.all[slides.index.current], slides.all[slideNumber]);
 
+		// приравниваю их значения, как при запуске слайдера
+		// чтобы некст при нажатии на стрелочку посчитался правильно
+		// текущий = следующий. А при нажатии следующий меняется
 		slides.index.current = slideNumber;
 		slides.index.next = slides.index.current;
 
 		updateCurrentNumber(slides.index.next);
 	}
 };
+
